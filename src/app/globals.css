@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* 🌞 Light Mode */
+  --background-page: #F8FAFC;       /* slate-50 */
+  --background-todo: #FFFFFF;       /* putih */
+  --foreground: #1E293B;            /* slate-800 */
+  --todo-border: #E5E7EB;           /* slate-200 */
+  --todo-shadow: rgba(0, 0, 0, 0.05);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Header */
+  --header-bg: #E0F2FE;             /* sky-100 */
+  --header-text: #0369A1;           /* sky-800 */
+
+  /* Input */
+  --input-bg: #FFFFFF;
+  --input-text: #1E293B;
+  --input-placeholder: #9CA3AF;
+  --input-border: #CBD5E1;          /* slate-300 */
+  --input-border-hover: #38BDF8;    /* sky-400 */
+  --input-border-focus: #0EA5E9;    /* sky-500 */
+  --input-ring: #0EA5E9;            /* sky-500 */
+  --input-shadow: rgba(0, 0, 0, 0.05);
+  --input-shadow-focus: rgba(14, 165, 233, 0.3); /* sky glow */
+
+  /* Button */
+  --button-bg: #0EA5E9;               /* sky-500 */
+  --button-hover: #0284C7;            /* sky-600 */
+  --button-active: #0369A1;           /* sky-700 */
+  --button-text: #FFFFFF;
+  --button-shadow: rgba(14, 165, 233, 0.3);   /* glow ringan sky-500 */
+  --button-shadow-hover: rgba(2, 132, 199, 0.4); /* lebih pekat sky-600 */
+  --button-ring: #0EA5E9;             /* ring biru saat fokus */
+
+  /* Card Todo */
+  --card-bg: #F0F9FF;                /* sky-50 */
+  --card-border: #BAE6FD;            /* sky-200 */
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --card-hover-bg: #E0F2FE;          /* sky-100 */
+  --card-hover-border: #38BDF8;      /* sky-400 */
+  --card-text: #1E293B;              /* slate-800 */
+  --card-checkbox: #0EA5E9;          /* sky-500 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+    /* 🌙 Dark Mode */
+    --background-page: #0F172A;     /* slate-900 */
+    --background-todo: #1E293B;     /* slate-800 */
+    --foreground: #E2E8F0;          /* slate-200 */
+    --todo-border: #334155;         /* slate-700 */
+    --todo-shadow: rgba(0, 0, 0, 0.4);
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    /* Header */
+    --header-bg: #1E3A8A;           /* blue-900 */
+    --header-text: #93C5FD;         /* blue-300 */
+
+    /* Input */
+    --input-bg: #1E293B;            
+    --input-text: #F9FAFB;
+    --input-placeholder: #64748B;
+    --input-border: #475569;        /* slate-600 */
+    --input-border-hover: #60A5FA;  /* blue-400 */
+    --input-border-focus: #3B82F6;  /* blue-500 */
+    --input-ring: #3B82F6;          /* blue-500 */
+    --input-shadow: rgba(0, 0, 0, 0.4);
+    --input-shadow-focus: rgba(59, 130, 246, 0.4); /* blue-500 glow */
+
+    /* Button */
+    --button-bg: #3B82F6;               /* blue-500 */
+  --button-hover: #2563EB;            /* blue-600 */
+  --button-active: #1E40AF;           /* blue-800 */
+  --button-text: #FFFFFF;
+  --button-shadow: rgba(59, 130, 246, 0.3);   /* glow biru */
+  --button-shadow-hover: rgba(37, 99, 235, 0.4);
+  --button-ring: #60A5FA;             /* ring biru terang */
+
+    /* Card Todo */
+    --card-bg: #1E293B;              /* slate-800 */
+    --card-border: #334155;          /* slate-700 */
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --card-hover-bg: #334155;        /* slate-700 */
+    --card-hover-border: #3B82F6;    /* blue-500 */
+    --card-text: #E2E8F0;            /* slate-200 */
+    --card-checkbox: #3B82F6;        /* blue-500 */
+  }
 }
